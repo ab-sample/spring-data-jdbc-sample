@@ -1,0 +1,42 @@
+server:
+  port: 19000
+
+spring:
+  application:
+    name: spring-data-jdbc-sample
+  datasource:
+    url: jdbc:mysql://127.0.0.1:23306/sdjs?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: Gah6kuP7ohfio4
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connectionTimeout: 30000
+      maximumPoolSize: 5
+      minimumIdle: 1
+      idleTimeout: 600000
+      dataSourceProperties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+
+logging:
+  level:
+    root: info
+    com:
+      qwfys:
+        app:
+          mybatis:
+            flex:
+              sample: debug
+    sql: debug
+
+
+
+
+
+
+
+
+
