@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.qwfys.sample</groupId>
-    <artifactId>spring-data-jdbc-sample</artifactId>
+    <artifactId>spring-data-jdbc-sample-099</artifactId>
     <version>0.0.1</version>
 
     <description>spring data jdbc sample</description>
