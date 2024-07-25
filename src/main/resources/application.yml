@@ -5,7 +5,7 @@ spring:
   application:
     name: spring-data-jdbc-sample
   datasource:
-    url: jdbc:mysql://127.0.0.1:23306/sdjs?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://127.0.0.1:23306/spring_data_jdbc_v0?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
     password: Gah6kuP7ohfio4
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -20,6 +20,11 @@ spring:
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
+  data:
+    jdbc:
+      dialect: mysql
+      repositories:
+        enabled: true
 
 logging:
   level:
@@ -32,8 +37,23 @@ logging:
               sample: debug
     sql: debug
 
-
-
+# springdoc-openapi项目配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.qwfys.sample.spring.data.jdbc.module.s01.api.controller
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
 
 
 
