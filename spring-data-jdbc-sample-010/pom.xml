@@ -11,16 +11,15 @@
     </parent>
 
     <groupId>com.qwfys.sample</groupId>
-    <artifactId>spring-data-jdbc-sample-099</artifactId>
+    <artifactId>spring-data-jdbc-sample-010</artifactId>
     <version>0.0.1</version>
 
-    <description>spring data jdbc sample</description>
+    <description>spring data jdbc sample 010</description>
 
     <properties>
         <java.version>17</java.version>
         <lombok.version>1.18.32</lombok.version>
-        <mapstruct.version>1.6.0.Beta2</mapstruct.version>
-        <!--<mapper.version>4.3.0</mapper.version>-->
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
     </properties>
 
@@ -29,7 +28,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
